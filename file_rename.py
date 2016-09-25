@@ -23,17 +23,20 @@ while True:
 for filename in os.listdir(file_dir):
     if filename.endswith(file_ext):
 
-        # Capture the filename
-        new_filename = filename
+        # Capture the filename without extension
+        new_filename = filename.replace(file_ext, '')
 
         # Iterate through the list and search for keyword
         for keyword in search_list:
-            # Replace strings as necessary
+            # Remove keyword
             new_filename = new_filename.replace(keyword, '')
-        
+
         # Strip left and right whitespace
         new_filename = new_filename.lstrip()
         new_filename = new_filename.rstrip()
+
+        # Add back the file extension
+        new_filename = new_filename + file_ext
 
         # Finally rename the file
         os.rename( os.path.join(file_dir, filename), os.path.join(file_dir, new_filename) )
