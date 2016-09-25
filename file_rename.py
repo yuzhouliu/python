@@ -1,3 +1,18 @@
+# ----------------
+# Script to rename all files in directory
+# Useful for getting rid of annoying keywords from torrent downloads.
+# Example:
+#   [AliQ] Steven Universe S03E01 Super Watermelon Island [1080p;WEB-DL x264]
+#
+#   1. Run this script
+#   2. Specify full path: D:\TV Shows\Steven Universe\Season 3
+#   3. File Extension: mp4
+#   4. Keywords to delete: [AliQ]
+#                          [1080p;WEB-DL x264]
+#                          done
+#   Voila
+#------------------
+
 import os
 
 # Done string
