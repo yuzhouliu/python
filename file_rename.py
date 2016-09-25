@@ -5,8 +5,12 @@ done_str = "done"
 
 # Get the directory to search
 file_dir = raw_input("Enter the directory path (c/p path): ")
+
 # Get file extension to look for
 file_ext = raw_input("File Extension: ")
+if not file_ext.startswith("."):
+    file_ext = "." + file_ext
+
 # List to store keywords to look for
 search_list = []
 
